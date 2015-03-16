@@ -11,7 +11,7 @@ require.js是遵循AMD（Asynchronous Module Definition）规范的前端模块�
 
 # require.js基础知识点
 
-具体知识点请移步上述require.js官网进行学习，这里只讲解最基础的require应用。
+具体知识点请移步上述`require.js`官网进行学习，这里只讲解最基础的require应用。
 
 ### require配置
 
@@ -48,4 +48,42 @@ require.js配置好了就可以使用以上信息进行开发了。
 
 ### define
 
-在上述代码中引入的js都是别人开发好的，有可能都已经写入了define
+在上述代码中引入的js都是别人开发好的，有可能都已经写入了`define`的相关内容，那么如果我们的页面上需要一个我们自己写的js，应该如何让他满足AMD规范呢？
+
+示例代码：
+
+```js
+define('moduleID',['jquery','swiper'],function($,Swiper){
+    $('#swiper-container').text('这是一个defin示例');
+    var swiper = new Swiper('swiper-container');
+});
+```
+
+我么可以像这样来声明一个`define`模块，`define`的作用你可以简单的理解为：`函数声明`，如果你想写一个函数，就必须先声明他，然后再调用它。
+
+`define`默认的有三个参数：`模块的ID`，`当前模块所依赖的js插件`，`一个在所有的插件加载完成之后执行的回调函数`。
+
+一般情况下，我们也可以这样写`define`：
+
+```js
+define(['jquery','swiper'],function($,Swiper){
+    dosomething();
+});
+```
+
+第一个参数可以省略。
+
+第二个参数与回调函数的是具有`一一对应`的关系的，对于上述代码，$对应的是jquery插件，Swiper对应的是swiper插件。
+
+但是在回调函数中的参数可以是任意值，比如：
+
+```js
+define(['jquery','swiper'],function(a,b){
+    dosomething();
+});
+```
+
+此时，a对应的是jquery插件，b对应的是swiper插件，相当于在你的代码中此时a就起到了$或者jQuery的作用。
+`但是,并不建议你更改插件默认的标识，比如jQuery人们所熟悉的就是$，我们就应该在代码中使用$来代替它，而不要使用其他任何内容`。
+
+### require
