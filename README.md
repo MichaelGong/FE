@@ -1,3 +1,3 @@
-# MichaelGong
-Michael Gong's Blog
-Michael Gong
+#漫画君前端使用requirejs的相关规范
+
+==========
