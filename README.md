@@ -109,9 +109,10 @@ require(['jquery','swiper'],function($,Swiper){
 # 例子
 
 下面我们就通过一个例子来了解具体如何进行操作：
-	* 新建html文件，在页面中<head></head>中添加require.js的script引用，并指明项目入口
+
+	1. 新建html文件，在页面中<head></head>中添加require.js的script引用，并指明项目入口
 		<script data-main="js/main" src="js/require.min.js"></scrtipt>
-	* 在js文件夹中新建a.js 和 b.js文件，其中的起码分别如下：
+	2. 在js文件夹中新建a.js 和 b.js文件，其中的起码分别如下：
 		a.js
 		```js
 		define(function(){
@@ -135,8 +136,8 @@ require(['jquery','swiper'],function($,Swiper){
 			return b;
 		})
 		```
-	* 在js文件夹中新建main.js的文件
-	* 在main.js文件中添加require.config的配置,并调用b模块
+	3. 在js文件夹中新建main.js的文件
+	4. 在main.js文件中添加require.config的配置,并调用b模块
 		```js
 		require.config({
 			baseUrl: './',
