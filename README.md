@@ -1,4 +1,4 @@
-# 漫画君前端使用requirejs的相关规范
+# 漫画君前端使用requirejs的相关规范 #
 
 require.js是遵循AMD（Asynchronous Module Definition）规范的前端模块化的工具。它能够将前端代码划分成一个个的模块，并对模块进行异步加载，以满足前端对模块化的需求。
 
@@ -83,7 +83,25 @@ define(['jquery','swiper'],function(a,b){
 });
 ```
 
-此时，a对应的是jquery插件，b对应的是swiper插件，相当于在你的代码中此时a就起到了$或者jQuery的作用。
+此时，a对应的是jquery插件，b对应的是swiper插件，相当于在你的代码中此时a就起到了`$`或者`jQuery`的作用。
 `但是,并不建议你更改插件默认的标识，比如jQuery人们所熟悉的就是$，我们就应该在代码中使用$来代替它，而不要使用其他任何内容`。
 
-### require
+### require方法
+
+如果define可以简单的理解成为函数声明的话，那么`require`就可以理解成为`函数调用`。
+
+实例代码：
+
+```js
+require(['jquery','swiper'],function($,Swiper){
+	dosomething();
+});
+```
+
+这样你就可以在你的代码中使用jquery和swiper插件了。
+
+注意：`define声明时只是引用了相应的插件但是并没有加载，但是require是将插件加载并写在了页面的<head>标签中`，
+具体形式如下：
+```html
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+```
