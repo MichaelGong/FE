@@ -106,7 +106,7 @@ require(['jquery','swiper'],function($,Swiper){
 <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 ```
 
-# 例子
+# 例子 
 
 下面我们就通过一个例子来了解具体如何进行操作：
 	### 新建html文件，在页面中<head></head>中添加require.js的script引用，并指明项目入口
