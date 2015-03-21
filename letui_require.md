@@ -38,15 +38,58 @@
 	app
 	 |----test					项目目录
 			|----index.html		项目页面
-	 		|----css				存放项目中css文件的文件夹
+	 		|----css			存放项目中css文件的文件夹
 	 		|----images			存放项目中图片文件的文件夹
 	 		|----js				存放项目中js文件的文件夹
-	 		|----resource			存放项目中其他文件的文件夹，例如音频文件
+	 		|----resource		存放项目中其他文件的文件夹，例如音频文件
 ```
 
 2.页面中引用require.min.js的方式：
 ```html
 <script data-main="js/index" defer="defer" async="async" src="//ngcdn.letwx.com/styles/jsng/require.min.js"></script>
 ```
+3.require.config.js的服务器路径为：http://ng.letwx.com/styles/jsng/require.config.js
+
+4.js中需要自动判断是服务器还是本地环境（为了减少代码提交时的手动改动）：
+```js
+var isDebug = (function(){
+	var hostnameIndex = window.location.hostname.split('.')[0];
+	return (hostnameIndex == '192') || (hostnameIndex == '127') || (hostnameIndex == 'localhost') || (hostnameIndex == '');
+}());
+```
+
+5.应用需要验证token信息的，代码如下：
+```js
+require(['MHJ', 'auth'],function(MHJ,oAuth){
+	check(MHJ,oAuth,init);
+	function init(letwxid,apiopenid,apitoken){
+		dosomething();
+	}
+});
+function check(MHJ,oAuth,cb){
+	var letwxid = MHJ.getUrlParam().letwxid;
+	if (letwxid) {
+		oAuth.cfg(letwxid, isDebug);
+		oAuth.checkToken(function(apiopenid, apitoken) {
+			cb && cb(letwxid, apiopenid, apitoken);
+		}, function() {
+			//alert('checktoken错误！');			
+		});
+	} else alert('应用ID错误');
+}
+```
+
+6.页面中需要有loading页面，请引用‘loading’这个组件，可以这样引用：
+```js
+require(['loading','x','xxx'],function(M,x,xx){
+	M.loading(1,1);
+	dosomething();
+	M.loadingHide();
+});
+```
+使用loading时，最好是将页面中的其他元素隐藏，为此约定如下：
 	
-	
+	页面中的所有内容都要被id="content"的元素包含，且在html中就将content元素隐藏，
+	等到需要加载的元素或进行的操作进行完毕后，再将content元素显示。
+
+7.主逻辑部分：error ==1002
