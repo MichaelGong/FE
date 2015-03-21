@@ -154,6 +154,7 @@ require(['jquery','swiper'],function($,Swiper){
 				'我是b.js中的test函数,我的后面会调用a.test函数'
 				'我是a.js中的test函数'
 		
+# [乐推前端基于requirejs的工作模式](/letui_require.md)
 		
 		
 	
