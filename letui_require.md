@@ -29,6 +29,8 @@
 	
 # 开发规则
 
+###开发人员需要遵守如下规则：
+
 1.开发人员所做的项目放在 `app` 文件夹中，在其中创建项目文件夹，并在文件夹中创建自己的项目，
 例如，test项目的形式如下：
 
@@ -42,7 +44,9 @@
 	 		|----resource			存放项目中其他文件的文件夹，例如音频文件
 ```
 
-
-	
+2.页面中引用require.min.js的方式：
+```html
+<script data-main="js/index" defer="defer" async="async" src="//ngcdn.letwx.com/styles/jsng/require.min.js"></script>
+```
 	
 	
