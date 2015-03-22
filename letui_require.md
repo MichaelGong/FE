@@ -16,10 +16,10 @@
 	乐推服务器上的工作目录如下：
 		ng.letwx.com
 			|
-			|----app               项目的工作目录
+			|----app               	项目的工作目录
 			|----styles			 
-					 |----css	   项目中可能会用到的插件所依赖的css文件
-					 |----jsng    项目中可能会用到的插件 和 require.config.js文件
+					 |----css	  	项目中可能会用到的插件所依赖的css文件
+					 |----jsng    	项目中可能会用到的插件 和 require.config.js文件
 	
 开发人员需要svn更新上述 `SVN工作目录` 中的两个svn目录。
 	
@@ -97,7 +97,7 @@ require(['loading','x','xxx'],function(M,x,xx){
 主逻辑部分应该在`loading`、`checktoken`之后进行。<br>
 主逻辑部分的代码应该保证代码的`简洁性`和`可读性`。
 
-	注意：在代码中会涉及到服务器请求，你需要判断服务器传过来的数据中的error信息是否等于1002，
+	>注意：在代码中会涉及到服务器请求，你需要判断服务器传过来的数据中的error信息是否等于1002，
 		如果等于1002就需要清除token信息（error等于1002代表token信息过期），具体代码如下：
 		var error = data.error - 0;
 		if(error == 1002){
@@ -106,4 +106,15 @@ require(['loading','x','xxx'],function(M,x,xx){
 			window.location.reload();
 		}
 	
-error ==1002
+# jsng文件夹中的插件说明
+
+jsng文件夹中存放着项目中可能会用到的插件和 `require.config.js`文件，
+
+下面是jsng中各插件的的作用和使用说明：
+1.require.config.js
+| 文件名称     	| 说明		| 使用方法  	|
+| :-------- |:---------:|:--------: |
+| Computer  | 1600 USD 	|  5   		|
+| Phone     |   12 USD 	|  12  		|
+| Pipe      |    1 USD 	| 234  		|
+
