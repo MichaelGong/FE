@@ -111,7 +111,9 @@ require(['loading','x','xxx'],function(M,x,xx){
 jsng文件夹中存放着项目中可能会用到的插件和 `require.config.js`文件，
 
 下面是jsng中各插件的的作用和使用说明：
+
 1.require.config.js
+
 | 文件名称     	| 说明		| 使用方法  	|
 | :-------- |:---------:|:--------: |
 | Computer  | 1600 USD 	|  5   		|
