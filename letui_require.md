@@ -92,4 +92,16 @@ require(['loading','x','xxx'],function(M,x,xx){
 	页面中的所有内容都要被id="content"的元素包含，且在html中就将content元素隐藏，
 	等到需要加载的元素或进行的操作进行完毕后，再将content元素显示。
 
-7.主逻辑部分：error ==1002
+7.主逻辑部分：
+主逻辑部分应该在loading、checktoken之后进行。
+主逻辑部分的代码应该保证代码的简洁性和可读性。
+	注意：在代码中会涉及到服务器请求，你需要判断服务器传过来的数据中的error信息是否等于1002，
+		如果等于1002就需要清除token信息（error等于1002代表token信息过期），具体代码如下：
+		var error = data.error - 0;
+		if(error == 1002){
+			alert('您的身份信息已过期，点击确定重新加载页面！');
+			oAuth.clear();
+			window.location.reload();
+		}
+	
+error ==1002
