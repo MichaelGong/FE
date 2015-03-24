@@ -117,8 +117,17 @@ jsng文件夹中存放着项目中可能会用到的插件和 `require.config.js
 | :-------- |:---------| :-------- |
 | require.config.js  | requirejs的配置文件，其中规定了各种插件	|     		|
 | MHJ.js     |   包含了一些常用的基础js方法 	|  [MHJ.js使用方法](MHJjs.md)  		|
+| auth.js	|	用于进行乐推的oAuth认证	|	[auth.js的使用方法](auth.md)	|
 | ngapi.js      |    对服务器的请求（封装了跨域请求和post请求） 	|  [ngapi.js的使用方法](ngapi.md)  		|
+| imgpreload.js		|	用于进行图片预加载	|	[imgpreload.js的使用方法](imgpreload.md)	|
 | wxshare.js	|	对微信分享进行了封装	| [wxshare.js的使用方法](wxshare.md) |
+| loading.js	|	用于页面进行请求时的loading效果	|	[loading.js的使用方法](loading.js)	|
 | css.min.js	|	用于加载css文件	|	[css.min.js的使用方法](https://github.com/guybedford/require-css)	|
+| hammer.min.js	|	一个触摸插件	|	[hammer.min.js的使用方法](https://github.com/hammerjs/hammer.js)	|
+| idangerous.swiper.min.js |	swiper单页滑动插件	|	[swiper.min.js的使用方法](https://github.com/nolimits4web/swiper/)	|
+| idangerous.swiper.hashnav.js	|	依赖于swiper.min.js的添加hash的插件	|	[hashnav.js的使用方法](hashnav.md)	|
+| idangerous.swiper_progress.js	|	依赖于swiper.min.js的progress插件	|	[progress.js的使用方法](progress.md)	|
+| qrcode.js	|	二维码生成插件	|	[qrcode的使用方法](https://github.com/kazuhikoarase/qrcode-generator)	|
+| shake.js	|	摇一摇插件	|	[shake.js的使用方法](https://github.com/alexgibson/shake.js)	|
 
 
