@@ -116,7 +116,7 @@ jsng文件夹中存放着项目中可能会用到的插件和 `require.config.js
 | 文件名称     	| 说明		| 使用方法  	|
 | :-------- |:---------| :-------- |
 | require.config.js  | requirejs的配置文件，其中规定了各种插件	|     		|
-| MHJ.js     |   包含了一些常用的基础js方法 	|  [MHJ.js使用方法](MHJjs.md)  		|
+| MHJ.js     |   包含了一些常用的基础js方法 	|  [MHJ.js使用方法](MHJ.md)  		|
 | auth.js	|	用于进行乐推的oAuth认证	|	[auth.js的使用方法](auth.md)	|
 | ngapi.js      |    对服务器的请求（封装了跨域请求和post请求） 	|  [ngapi.js的使用方法](ngapi.md)  		|
 | imgpreload.js		|	用于进行图片预加载	|	[imgpreload.js的使用方法](imgpreload.md)	|
