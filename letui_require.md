@@ -105,6 +105,8 @@ require(['loading','x','xxx'],function(M,x,xx){
 			oAuth.clear();
 			window.location.reload();
 		}
+
+8.在测试地址下，`微信分享`是无法正常调用的，因为需要在微信后台设置相应的域名才可以，所以建议在`微信分享`的代码在其他逻辑都完成之后再加入到页面中去。
 	
 # jsng文件夹中的插件说明
 
