@@ -2,7 +2,7 @@
 
 ###	MHJ.js返回了MHJ对象，该对象中封装了对cookie、url参数、post请求、模板的处理方法，该模块依赖于 `jQuery` 或 `Zepto` 。
 
-## API
+#	API
 
 ###	MHJ.mlog()
 用于输出log信息
@@ -48,7 +48,26 @@ var age = MHJ.getUrlParam('url').age;
 
 ### MHJ.tmpl
 对html模板进行数据绑定
+
 使用示例
+```html
+<div id="test"></div>
+<textarea id="testTMP" style="display:none;">
+	<%
+    	if(data.id > 6){
+    %>
+    	<div>id 大于 6, id等于<%=data.id%></div>
+    <%
+    	}else{
+    %>
+    	<div>id 小于 6, id等于<%=data.id%></div>
+    <%
+    	}
+    %>
+</textarea>
+```
 ```js
+var data = {id:5}; //data必须是个json形式的对象
 $('#test').html(MHJ.tmpl($('#testTMP').text(),data));
 ```
+经过上述js可以使id="test"的div展示出我们需要的内容。
