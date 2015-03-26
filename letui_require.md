@@ -89,7 +89,7 @@ require(['loading','x','xxx'],function(M,x,xx){
 ```
 使用loading时，最好是将页面中的其他元素隐藏，为此约定如下：
 	
-	页面中的所有内容都要被id="content"的元素包含，且在html中就将content元素隐藏，
+>页面中的所有内容都要被id="content"的元素包含，且在html中就将content元素隐藏，
 	等到需要加载的元素或进行的操作进行完毕后，再将content元素显示。
 
 7.主逻辑部分：
@@ -115,21 +115,37 @@ jsng文件夹中存放着项目中可能会用到的插件和 `require.config.js
 下面是jsng中各插件的的作用和使用说明：
 
 
-| 文件名称     	| 说明		| 使用方法  	|
-| :-------- |:---------| :-------- |
-| require.config.js  | requirejs的配置文件，其中规定了各种插件	|     		|
-| MHJ.js     |   包含了一些常用的基础js方法 	|  [MHJ.js使用方法](MHJ.md)  		|
-| auth.js	|	用于进行乐推的oAuth认证	|	[auth.js的使用方法](auth.md)	|
-| ngapi.js      |    对服务器的请求（封装了跨域请求和post请求） 	|  [ngapi.js的使用方法](ngapi.md)  		|
-| imgpreload.js		|	用于进行图片预加载	|	[imgpreload.js的使用方法](imgpreload.md)	|
-| wxshare.js	|	对微信分享进行了封装	| [wxshare.js的使用方法](wxshare.md) |
-| loading.js	|	用于页面进行请求时的loading效果	|	[loading.js的使用方法](loading.js)	|
-| css.min.js	|	用于加载css文件	|	[css.min.js的使用方法](https://github.com/guybedford/require-css)	|
-| hammer.min.js	|	一个触摸插件	|	[hammer.min.js的使用方法](https://github.com/hammerjs/hammer.js)	|
-| idangerous.swiper.min.js |	swiper单页滑动插件	|	[swiper.min.js的使用方法](https://github.com/nolimits4web/swiper/)	|
-| idangerous.swiper.hashnav.js	|	依赖于swiper.min.js的添加hash的插件	|	[hashnav.js的使用方法](hashnav.md)	|
-| idangerous.swiper_progress.js	|	依赖于swiper.min.js的progress插件	|	[progress.js的使用方法](progress.md)	|
-| qrcode.js	|	二维码生成插件	|	[qrcode的使用方法](https://github.com/kazuhikoarase/qrcode-generator)	|
-| shake.js	|	摇一摇插件	|	[shake.js的使用方法](https://github.com/alexgibson/shake.js)	|
+| 文件名称     |使用代号	| 说明		| 使用方法  	|
+| :-------- |:---------|:---------| :-------- |
+| require.config.js  | 无 | requirejs的配置文件，其中规定了各种插件	|     		|
+| MHJ.js     | MHJ  | 包含了一些常用的基础js方法 	|  [MHJ.js使用方法](MHJ.md)  		|
+| auth.js	| oAuth	| 用于进行乐推的oAuth认证	|	[auth.js的使用方法](auth.md)	|
+| ngapi.js      | ngapi   | 对服务器的请求（封装了跨域请求和post请求） 	|  [ngapi.js的使用方法](ngapi.md)  		|
+| imgpreload.js		| imgpreload	| 用于进行图片预加载	|	[imgpreload.js的使用方法](imgpreload.md)	|
+| wxshare.js	| wxshare	| 对微信分享进行了封装	| [wxshare.js的使用方法](wxshare.md) |
+| loading.js	| M	| 用于页面进行请求时的loading效果	|	[loading.js的使用方法](loading.js)	|
+| css.min.js	| css	| 用于加载css文件	|	[css.min.js的使用方法](https://github.com/guybedford/require-css)	|
+| hammer.min.js	| Hammer	| 一个触摸插件	|	[hammer.min.js的使用方法](https://github.com/hammerjs/hammer.js)	|
+| idangerous.swiper.min.js | Swiper	| swiper单页滑动插件	|	[swiper.min.js的使用方法](https://github.com/nolimits4web/swiper/)	|
+| idangerous.swiper.hashnav.js	|  Swiper	|	依赖于swiper.min.js的添加hash的插件	|	[hashnav.js的使用方法](hashnav.md)	|
+| idangerous.swiper_progress.js	|  Swiper	|	依赖于swiper.min.js的progress插件	|	[progress.js的使用方法](progress.md)	|
+| qrcode.js	| QRCode	| 二维码生成插件	| [qrcode的使用方法](https://github.com/kazuhikoarase/qrcode-generator)	|
+| shake.js	| Shake 	|摇一摇插件	|	[shake.js的使用方法](https://github.com/alexgibson/shake.js)	|
+| jquery.min.js | $		| jquery插件 | [jquery中文文档](http://www.hemin.cn/jq/) |
+| zepto.min.js 	| $		| zepto插件（jQuery的简化版）	| [zepto中文文档](http://mweb.baidu.com/zeptoapi/) |
 
+
+```js
+var config = (function(){
+	var baseurl = 'http://lppz.letwx.com/app/eat/';
+	var arr = window.location.hostname.split('.')[0];
+	var isDebug = (arr=='192')||(arr=='127')||(arr=='localhost')||(arr=='');
+	return {
+		touch : 'touchstart',
+		isDebug : isDebug,
+		baseUrl : isDebug ? '../../../lppz/eat' : baseurl,
+		urlConfig : isDebug ? 'js/libs/require.config.js':baseurl+'js/libs/require.config.js'
+	}
+}());
+```
 
