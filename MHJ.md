@@ -2,6 +2,8 @@
 
 ###	MHJ.js返回了MHJ对象，该对象中封装了对cookie、url参数、post请求、模板的处理方法，该模块依赖于 `jQuery` 或 `Zepto` 。
 
+> 在require引用中此模块的引用代号为 `MHJ` 
+
 #	API
 
 ###	MHJ.mlog()

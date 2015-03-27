@@ -107,6 +107,13 @@ require(['loading','x','xxx'],function(M,x,xx){
 		}
 
 8.在测试地址下，`微信分享`是无法正常调用的，因为需要在微信后台设置相应的域名才可以，所以建议`微信分享`的代码在其他逻辑都完成之后再加入到页面中去。
+
+9.开发人员开发的任何一个项目的url上都需要带有 `letwxid` 这个字段，形式如下： 
+```
+http://ng.letwx.com/app/xxx/index.html?letwxid=12
+```
+目的是为了便于管理、修改相关应用，以及依赖于 `letwxid` 会做一些其他的操作。开发人员开发时，如果一个应用中有多个页面，应该保证 `letwxid` 都是从首页传递下去的，即只需要在首页的url上加上 `letwxid` ,其他页面的 `letwxid` 都是通过首页传递下去的形式添加的。
+> `letwxid` 的查询地址：http://wewiki.sinaapp.com/NG平台letwxid对应关系表
 	
 # jsng文件夹中的插件说明
 
