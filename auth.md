@@ -10,5 +10,5 @@
 对获取auth信息的操作进行相应的配置，配置了authurl等信息。
 * letwxid ：  必须，[查询地址](http://wewiki.sinaapp.com/NG平台letwxid对应关系表)
 * isdebug ：  是否为调试模式，非调试模式（正式环境）下会跳转到微信相关页面获取用户信息再跳转回来。
-* scope ： 是否回去用户头像、昵称等个人信息。
+* scope ： 是否获取用户头像、昵称等个人信息。
 
