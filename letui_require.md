@@ -114,6 +114,16 @@ http://ng.letwx.com/app/xxx/index.html?letwxid=12
 ```
 目的是为了便于管理、修改相关应用，以及依赖于 `letwxid` 会做一些其他的操作。开发人员开发时，如果一个应用中有多个页面，应该保证 `letwxid` 都是从首页传递下去的，即只需要在首页的url上加上 `letwxid` ,其他页面的 `letwxid` 都是通过首页传递下去的形式添加的。
 > `letwxid` 的查询地址：http://wewiki.sinaapp.com/NG平台letwxid对应关系表
+
+10.微信分享引用 `wxshare` 插件，在验证了身份信息后调用方法如下：
+```js
+wxshare.initWx(shareInfo,gameid,apiopenid,apitoken); //可能会有变动
+```
+在没有验证身份信息的时候调用方法如下：
+```js
+wxshare.initWxAuth(share, letwxid);
+```
+具体调用方式请参考下方的 `wxshare.js的使用方法`。
 	
 # jsng文件夹中的插件说明
 
