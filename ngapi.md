@@ -1,18 +1,18 @@
-#	ngapi.js��ʹ�÷���
+﻿#	ngapi.js的使用方法
 
-### ngapi.js���ڶԷ���������post���󡣴�ģ�������� `jQuery`���� `Zepto`
+### ngapi.js用于对服务器进行post请求。此模块依赖于 `jQuery`或者 `Zepto`
 
-> ��require�����д�ģ������ô���Ϊ `ngapi` 
+> 在require引用中此模块的引用代号为 `ngapi` 
 
 #	API
 
 ### ngapi(action,params,appid,callback,apiopenid,apitoken,debug)
-* action : ���룬����Ľӿ����ƣ�ȫ��Сд
-* params �� ��ѡ������ӿڵĲ�����json��ʽ�Ķ���
-* appid �� ���룬��Ӧ�˺ŵ�letwxid
-* callback �� ���룬�ص�����������һ��json��ʽ�Ĳ���
-* apiopenid �� ���룬�û���apiopenid
-* apitoken �� ���룬�û���apitoken
-* debug : ��ѡ������Ϊnfʱ����������debugģʽ��ϵͳ�᲻��apiopenid,apitoken���м�Ȩ
+* action : 必须，请求的接口名称，全部小写
+* params ： 可选，请求接口的参数，json格式的对象
+* appid ： 必须，对应账号的letwxid
+* callback ： 必须，回调方法，返回一个json格式的参数
+* apiopenid ： 必须，用户的apiopenid
+* apitoken ： 必须，用户的apitoken
+* debug : 可选，设置为nf时，代表进入debug模式，系统会不对apiopenid,apitoken进行鉴权
 
-�˷����ڲ����õ���post��ʽ���з��������󣬲�����˿������⡣
+此方法内部采用的是post方式进行服务器请求，并解决了跨域问题。
