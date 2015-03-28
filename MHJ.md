@@ -73,3 +73,4 @@ var data = {id:5}; //data必须是个json形式的对象
 $('#test').html(MHJ.tmpl($('#testTMP').text(),data));
 ```
 经过上述js可以使id="test"的div展示出我们需要的内容。
+
