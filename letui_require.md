@@ -63,7 +63,7 @@ var config = (function(){
         isDebug : isDebug,
         baseUrl : isDebug ? '../../../' : baseurl,
 		baseCDNUrl : 'http://ngcdn.letwx.com/',
-        urlConfig : (isDebug ? '':baseurl)+'styles/jsng/require.config.js'
+        urlConfig : (isDebug ? '../../../' : baseurl)+'styles/jsng/require.config.js'
     }
 }());
 ```
