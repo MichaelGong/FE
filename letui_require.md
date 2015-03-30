@@ -46,7 +46,7 @@
 
 2.页面中引用require.min.js的方式：
 ```html
-<script data-main="js/index" defer="defer" async="async" src="//ngcdn.letwx.com/styles/jsng/require.min.js"></script>
+<script data-main="js/index" src="//ngcdn.letwx.com/styles/jsng/require.min.js"></script>
 ```
 3.require.config.js的服务器路径为：http://ng.letwx.com/styles/jsng/require.config.js
 
