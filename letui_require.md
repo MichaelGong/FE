@@ -51,10 +51,20 @@
 3.require.config.js的服务器路径为：http://ng.letwx.com/styles/jsng/require.config.js
 
 4.js中需要自动判断是服务器还是本地环境（为了减少代码提交时的手动改动）：
+>此方法和之前的方式不一样，请注意修改
+
 ```js
-var isDebug = (function(){
-	var hostnameIndex = window.location.hostname.split('.')[0];
-	return (hostnameIndex == '192') || (hostnameIndex == '127') || (hostnameIndex == 'localhost') || (hostnameIndex == '');
+var config = (function(){
+    var baseurl = 'http://ng.letwx.com/';
+    var arr = window.location.hostname.split('.')[0];
+    var isDebug = (arr=='192')||(arr=='127')||(arr=='localhost')||(arr=='');
+    return {
+        touch : 'touchstart',
+        isDebug : isDebug,
+        baseUrl : isDebug ? '../../../' : baseurl,
+		baseCDNUrl : 'http://ngcdn.letwx.com/',
+        urlConfig : (isDebug ? '':baseurl)+'styles/jsng/require.config.js'
+    }
 }());
 ```
 
