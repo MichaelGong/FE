@@ -23,7 +23,7 @@
 * 该方法返回一个包含传递信息的对象
 
 >注意：http://ng.letwx.com/app/xxx/index.html?letwxid=1&name=let&age=12
->对于这个链接经过该方法处理后的结果为：{letwxid:1,name:1,age:12}
+>对于这个链接经过该方法处理后的结果为：{letwxid:1,name:let,age:12}
 >为了防止浏览器url中出现的 `#` 对传递数据产生影响，代码对 `#` 做了特殊处理，默认会将链接中的所有`#` 去除掉，然后再做处理。
 
 使用方法示例：
