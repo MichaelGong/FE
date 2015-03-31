@@ -150,7 +150,7 @@ jsng文件夹中存放着项目中可能会用到的插件和 `require.config.js
 | ngapi.js      | ngapi   | 对服务器的请求（封装了跨域请求和post请求） 	|  [ngapi.js的使用方法](ngapi.md)  		|
 | imgpreload.js		| imgpreload	| 用于进行图片预加载	|	[imgpreload.js的使用方法](imgpreload.md)	|
 | wxshare.js	| wxshare	| 对微信分享进行了封装	| [wxshare.js的使用方法](wxshare.md) |
-| loading.js	| M	| 用于页面进行请求时的loading效果	|	[loading.js的使用方法](loading.js)	|
+| loading.js	| M	| 用于页面进行请求时的loading效果	|	[loading.js的使用方法](loading.md)	|
 | css.min.js	| css	| 用于加载css文件	|	[css.min.js的使用方法](https://github.com/guybedford/require-css)	|
 | hammer.min.js	| Hammer	| 一个触摸插件	|	[hammer.min.js的使用方法](https://github.com/hammerjs/hammer.js)	|
 | idangerous.swiper.min.js | Swiper	| swiper单页滑动插件	|	[swiper.min.js的使用方法](https://github.com/nolimits4web/swiper/)	|
