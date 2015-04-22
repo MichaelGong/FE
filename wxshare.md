@@ -31,7 +31,7 @@
 ### wxshare.initWxAuth(share,letwxid,succCb,cancelCb, errorCb)
 微信分享，此方法与 `wxshare.initWx` 的区别在于在此方法内部会进行auth鉴权来回去用户的 `apiopenid` 和 `apitoken`，而 `wxshare.initWx`不会进行鉴权，因为	 `wxshare.initWx`的参数中传入了用户信息
 
-此方法中的各参数和 `wxshare.initWx`中一致。
+此方法中的各参数和 `wxshare.initWx`中一致,`非必要情况下请使用wxshare.initWx`方法。
 
 ### wxshare.initWxCfg(share, wxconfig, succCb, cancelCb, errorCb)
 用于注册微信分享事件。
