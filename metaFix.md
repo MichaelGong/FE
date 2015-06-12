@@ -5,8 +5,6 @@
 > 在require引用中此模块的引用代号为 `MetaFix` ,需要注意的是，此模块只需要引用并不用做任何设置，
 代码内部默认执行了 `MetaFix.viewport(640);`。
 
-
-
 #	API
 
 ### MetaFix.viewport(designWidth)
