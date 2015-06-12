@@ -161,6 +161,7 @@ jsng文件夹中存放着项目中可能会用到的插件和 `require.config.js
 | jquery.min.js | $		| jquery插件 | [jquery中文文档](http://www.hemin.cn/jq/) |
 | zepto.min.js 	| $		| zepto插件（jQuery的简化版）	| [zepto中文文档](http://mweb.baidu.com/zeptoapi/) |
 | wx	| wx 	| 微信官方出的微信分享插件	| [使用方法](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html) |
+| metaFix	| MetaFix	| 用于按照设计图的宽度设置网页宽度	|[metaFix.js的使用方法](metaFix.md)	|
 
 
 ```js
