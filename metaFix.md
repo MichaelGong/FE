@@ -21,3 +21,4 @@
  此方法内部占用了`id='M_zoom'` 和 `class='.M_zoom'`,使用时请注意。
 > 此方法内部默认会将viewport设置成为如下形式:
  `<meta id="meta_viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">`
+
