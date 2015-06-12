@@ -14,7 +14,6 @@
 > 但是这两种方式都需要注意字体大小的设置，建议页面中字体单位统一用rem.
 
 ### 动态设置viewport
-此方法的思路来自 ：[网易前端](https://github.com/unbug/generator-webappstarter/blob/master/app/templates/app/src/util/MetaHandler.js)
 页面需要加上如下 `meta` :
 ```html
 <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
