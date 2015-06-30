@@ -117,7 +117,7 @@ require(['jquery','swiper'],function($,Swiper){
 a.js
 ```js
 define(function(){
-	var a = function(){
+	var a = {
 		test : function(){
 			alert('我是a.js中的test函数');
 		}
@@ -127,8 +127,8 @@ define(function(){
 ```
 b.js
 ```js
-define(a,function(a){
-	var b = function(){
+define(['a'],function(a){
+	var b = {
 		test : function(){
 			alert('我是b.js中的test函数,我的后面会调用a.test函数');
 			a.test();
